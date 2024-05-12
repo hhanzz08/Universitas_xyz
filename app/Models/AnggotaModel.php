@@ -6,10 +6,10 @@ use CodeIgniter\Model;
 
 class AnggotaModel extends Model
 {
-    protected $table = 'anggota'; // Nama tabel di database
-    protected $primaryKey = 'id'; // Nama primary key
+    protected $table = 'petugas'; 
+    protected $primaryKey = 'id'; 
 
-    protected $allowedFields = ['nama', 'jabatan', 'tugas']; // Kolom yang diizinkan untuk diisi
+    protected $allowedFields = ['nama', 'tugas', 'alamat','no_telpon'];
 
     /**
      * Mengambil data anggota dari database.
@@ -17,13 +17,13 @@ class AnggotaModel extends Model
      * @param int|null $id ID anggota yang ingin diambil. Jika null, maka akan mengambil semua data anggota.
      * @return array|null Data anggota jika ditemukan, atau null jika tidak.
      */
-    public function getAnggota($id = null)
+    public function getpetugas($id = null)
     {
         if ($id === null) {
-            return $this->findAll(); // Mengambil semua data anggota
+            return $this->findAll(); 
         }
 
-        return $this->find($id); // Mengambil data anggota berdasarkan ID
+        return $this->find($id); 
     }
 
     /**
@@ -32,9 +32,9 @@ class AnggotaModel extends Model
      * @param array $data Data anggota yang akan disimpan.
      * @return bool True jika berhasil disimpan, dan false jika gagal.
      */
-    public function saveAnggota($data)
+    public function savepetugas($data)
     {
-        return $this->insert($data); // Menyimpan data anggota baru ke database
+        return $this->insert($data); 
     }
 
     /**
@@ -44,9 +44,9 @@ class AnggotaModel extends Model
      * @param array $data Data baru untuk anggota tersebut.
      * @return bool True jika berhasil diupdate, dan false jika gagal.
      */
-    public function updateAnggota($id, $data)
+    public function updatepetugas($id, $data)
     {
-        return $this->update($id, $data); // Mengupdate data anggota di database
+        return $this->update($id, $data); 
     }
 
     /**
@@ -55,8 +55,8 @@ class AnggotaModel extends Model
      * @param int $id ID anggota yang akan dihapus.
      * @return bool True jika berhasil dihapus, dan false jika gagal.
      */
-    public function deleteAnggota($id)
+    public function deletepetugas($id)
     {
-        return $this->delete($id); // Menghapus data anggota dari database
+        return $this->delete($id); 
     }
 }

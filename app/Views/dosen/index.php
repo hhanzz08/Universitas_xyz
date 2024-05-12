@@ -7,11 +7,11 @@
     <title>List Dosen</title>
     <style>
         body {
-            background-color: #6495ED; /* Warna biru */
-            color: #000; /* Warna teks putih */
-            font-family: Arial, sans-serif; /* Jenis font */
-            margin: 0; /* Menghapus margin */
-            padding: 0; /* Menghapus padding */
+            background-color: #6495ED; 
+            color: #000; 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0;
         }
 
         table {
@@ -21,14 +21,14 @@
         }
 
         th, td {
-            border: 1px solid #a0da00;
+            border: 1px solid #000000;
             padding: 8px;
-            text-align: left;
+            text-align: center;
         }
 
         th {
             background-color: #a05a24;
-            color: #fff; /* Warna teks putih */
+            color: #fff; 
         }
 
         tr:nth-child(even) {
@@ -41,7 +41,7 @@
         }
 
         .btn {
-            background-color: #1c9921; /* Warna hijau */
+            background-color: #1c9921; 
             color: #2a04c6;
             padding: 10px 20px;
             border: none;
@@ -53,7 +53,7 @@
         }
 
         .btn:hover {
-            background-color: #45a049; /* Warna hijau lebih gelap saat dihover */
+            background-color: #45a049; 
         }
     </style>
 </head>

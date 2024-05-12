@@ -2,7 +2,7 @@
 <?php
 
 use App\Controllers\Dosen;
-use App\Controllers\Anggota;
+use App\Controllers\Petugas;
 
 $routes->group('dosen', ['namespace' => 'App\Controllers'], function ($routes) {
     $routes->get('/', 'Dosen::index');
