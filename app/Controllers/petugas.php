@@ -83,4 +83,11 @@ class petugas extends BaseController
 
         return redirect()->to('/petugas')->with('success', 'Data petugas berhasil diperbarui.');
     }
+    public function delete($id)
+    {
+        // Hapus data dari database menggunakan model
+        $this->AnggotaModel->delete($id);
+
+        return redirect()->to('/petugas')->with('success', 'Data petugas berhasil dihapus.');
+    }
 }

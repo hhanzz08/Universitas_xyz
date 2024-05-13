@@ -51,10 +51,27 @@
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin-top: 10px;
         }
         
         input[type="submit"]:hover {
             background-color: #45a049;
+        }
+
+        .btn-batal {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #f00;
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn-batal:hover {
+            background-color: #ddd;
         }
     </style>
 </head>
@@ -71,6 +88,7 @@
             <label for="no_telpon">No Telpon:</label>
             <input type="text" id="no_telpon" name="no_telpon">
             <input type="submit" value="Simpan">
+            <a href="<?= base_url('/petugas') ?>" class="btn-batal">Batal</a>
         </form>
     </div>
 </body>

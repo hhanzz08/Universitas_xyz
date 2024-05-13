@@ -1,4 +1,3 @@
-<!-- views/dosen/index.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +11,9 @@
             font-family: Arial, sans-serif; 
             margin: 0; 
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         table {
@@ -48,8 +50,15 @@
             cursor: pointer;
             border-radius: 5px;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
+        }
+        .btnhome {
+            background-color: #a17917; 
+            color: #2a04c6;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
         }
 
         .btn:hover {
@@ -58,6 +67,8 @@
     </style>
 </head>
 <body>
+    
+
     <h1>List Dosen</h1>
     <table>
         <thead>
@@ -82,6 +93,8 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="<?= base_url('dosen/create') ?>" class="btn">Tambah Dosen</a>
+    <a href="<?= base_url('dosen/create') ?>" class="btn">Tambah Dosen</a><br>
+    <!-- Tombol menuju halaman Home -->
+    <a href="<?= base_url('index.php') ?>" class="btnhome">Home</a>
 </body>
 </html>

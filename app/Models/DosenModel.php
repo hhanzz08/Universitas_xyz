@@ -21,4 +21,15 @@ class DosenModel extends Model
     {
         return $this->update($id, $data); // Mengupdate data dosen di database
     }
+
+    /**
+     * Menghapus data anggota dari database.
+     *
+     * @param int $id ID dosen yang akan dihapus.
+     * @return bool True jika berhasil dihapus, dan false jika gagal.
+     */
+    public function deleteDosen($id)
+    {
+        return $this->delete($id); 
+    }
 }

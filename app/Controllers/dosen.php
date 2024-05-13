@@ -79,4 +79,12 @@ class Dosen extends BaseController
 
         return redirect()->to('/dosen')->with('success', 'Data dosen berhasil diperbarui.');
     }
+
+    public function delete($id)
+    {
+        // Hapus data dari database menggunakan model
+        $this->dosenModel->delete($id);
+
+        return redirect()->to('/dosen')->with('success', 'Data dosen berhasil dihapus.');
+    }
 }

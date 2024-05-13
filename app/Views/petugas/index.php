@@ -1,4 +1,3 @@
-<!-- views/dosen/index.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +11,9 @@
             font-family: Arial, sans-serif; 
             margin: 0; 
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         table {
@@ -42,18 +44,33 @@
 
         .btn {
             background-color: #1c9921; 
-            color: #2a04c6;
+            color: #fff; /* Ubah warna teks */
             padding: 10px 20px;
             border: none;
             cursor: pointer;
             border-radius: 5px;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
+            margin-bottom: 10px; /* Ubah margin-bottom */
+            display: inline-block; /* Tambah properti */
         }
 
         .btn:hover {
             background-color: #45a049; 
+        }
+        
+        .btnhome {
+            background-color: #a17917; 
+            color: #fff; /* Ubah warna teks */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block; /* Tambah properti */
+        }
+        
+        .btnhome:hover {
+            background-color: #e6c71a; /* Ubah warna hover */
         }
     </style>
 </head>
@@ -84,6 +101,10 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="<?= base_url('petugas/create') ?>" class="btn">Tambah Petugas</a>
+    <div class="btn-container">
+        <a href="<?= base_url('petugas/create') ?>" class="btn">Tambah Petugas</a><br>
+        <!-- Tombol menuju halaman Home -->
+        <a href="<?= base_url() ?>" class="btnhome">Home</a>
+    </div>
 </body>
 </html>

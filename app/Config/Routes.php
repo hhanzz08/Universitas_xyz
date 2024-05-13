@@ -1,8 +1,10 @@
-
 <?php
 
 use App\Controllers\Dosen;
 use App\Controllers\Petugas;
+
+$routes->setDefaultController('Home'); // Mengatur Home sebagai default controller
+$routes->get('/', 'Home::index'); // Ini akan mengarahkan ke metode index dalam controller Home
 
 $routes->group('dosen', ['namespace' => 'App\Controllers'], function ($routes) {
     $routes->get('/', 'Dosen::index');
